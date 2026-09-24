@@ -1,0 +1,45 @@
+14:42:33 INFO lii_site_scan: Host: mZrO2_supercell.xyz, 96 atoms
+14:42:56 INFO mace_relax: Loading MACE model 'medium-mpa-0' on cpu (float64)
+14:42:56 INFO root: Using CPU
+14:42:56 INFO root: Using head default out of  ['default']
+14:42:56 INFO lii_site_scan: Li_i from X1_2c_cavity_centre, ISIF=2
+14:43:29 INFO mace_relax:   mZrO2_Lii_X1_2c_cavity_centre_isif2 E    -914.8962 eV | fmax 0.0097 eV/A |   62 steps | converged True
+14:43:29 INFO lii_site_scan: Li_i from X2_4e_cavity_offcentre, ISIF=2
+14:43:49 INFO mace_relax:   mZrO2_Lii_X2_4e_cavity_offcentre_isif2 E    -914.8962 eV | fmax 0.0093 eV/A |   38 steps | converged True
+14:43:49 INFO lii_site_scan: Li_i from X3_4e_tet_pocket, ISIF=2
+14:44:28 INFO mace_relax:   mZrO2_Lii_X3_4e_tet_pocket_isif2 E    -914.8963 eV | fmax 0.0066 eV/A |   65 steps | converged True
+14:44:28 INFO lii_site_scan: Li_i from X4_4e_5O_nearZr, ISIF=2
+14:45:25 INFO mace_relax:   mZrO2_Lii_X4_4e_5O_nearZr_isif2 E    -914.8962 eV | fmax 0.0083 eV/A |   73 steps | converged True
+14:45:25 INFO lii_site_scan: Li_i from DFT_relaxed, ISIF=2
+14:45:53 INFO mace_relax:   mZrO2_Lii_DFT_relaxed_isif2    E    -914.8962 eV | fmax 0.0089 eV/A |   37 steps | converged True
+14:45:53 INFO lii_site_scan: Li_i from DFT_original_start, ISIF=2
+14:46:41 INFO mace_relax:   mZrO2_Lii_DFT_original_start_isif2 E    -914.8963 eV | fmax 0.0092 eV/A |   69 steps | converged True
+14:46:41 INFO lii_site_scan: Li_i from X1_2c_cavity_centre, ISIF=3
+14:47:37 INFO mace_relax:   mZrO2_Lii_X1_2c_cavity_centre_isif3 E    -914.9175 eV | fmax 0.0086 eV/A |   78 steps | converged True
+14:47:37 INFO lii_site_scan: Li_i from X2_4e_cavity_offcentre, ISIF=3
+14:48:26 INFO mace_relax:   mZrO2_Lii_X2_4e_cavity_offcentre_isif3 E    -914.9173 eV | fmax 0.0089 eV/A |   66 steps | converged True
+14:48:26 INFO lii_site_scan: Li_i from X3_4e_tet_pocket, ISIF=3
+14:49:27 INFO mace_relax:   mZrO2_Lii_X3_4e_tet_pocket_isif3 E    -914.9172 eV | fmax 0.0096 eV/A |   87 steps | converged True
+14:49:27 INFO lii_site_scan: Li_i from X4_4e_5O_nearZr, ISIF=3
+14:50:32 INFO mace_relax:   mZrO2_Lii_X4_4e_5O_nearZr_isif3 E    -914.9172 eV | fmax 0.0090 eV/A |   94 steps | converged True
+14:50:32 INFO lii_site_scan: Li_i from DFT_relaxed, ISIF=3
+14:51:17 INFO mace_relax:   mZrO2_Lii_DFT_relaxed_isif3    E    -914.9173 eV | fmax 0.0067 eV/A |   64 steps | converged True
+14:51:17 INFO lii_site_scan: Li_i from DFT_original_start, ISIF=3
+14:52:18 INFO mace_relax:   mZrO2_Lii_DFT_original_start_isif3 E    -914.9171 eV | fmax 0.0072 eV/A |   86 steps | converged True
+14:52:18 INFO lii_site_scan: 
+ isif                          start  dE_eV nearest_site  d_nearest  d_DFT  moved_A  CN_O                        Li_O_A  Li_Zr_min_A  prim_x  prim_y  prim_z  converged
+    2               X3_4e_tet_pocket  0.000          DFT      0.165  0.165    1.149     5 1.86 1.93 2.06 2.10 2.24 2.99        2.483   0.933   0.036   0.468       True
+    2             DFT_original_start  0.000          DFT      0.166  0.166    0.888     5 1.86 1.93 2.06 2.09 2.24 2.99        2.483   0.933   0.036   0.468       True
+    2                    DFT_relaxed  0.000          DFT      0.156  0.156    0.168     5 1.86 1.93 2.06 2.10 2.23 2.99        2.482   0.932   0.038   0.468       True
+    2         X2_4e_cavity_offcentre  0.000          DFT      0.155  0.155    0.284     5 1.85 1.93 2.06 2.10 2.23 2.99        2.482   0.932   0.038   0.468       True
+    2                X4_4e_5O_nearZr  0.000          DFT      0.164  0.164    1.752     5 1.86 1.93 2.06 2.10 2.24 2.99        2.483   0.933   0.037   0.468       True
+    2            X1_2c_cavity_centre  0.000          DFT      0.173  0.173    0.361     5 1.86 1.93 2.05 2.09 2.25 2.99        2.483   0.065   0.964   0.531       True
+    2 defects.py_Li_i (existing run)  0.069           X3      0.374  0.664      NaN     4 1.83 1.84 1.97 2.18 2.61 2.74        2.644   0.818   0.076   0.352       True
+    3            X1_2c_cavity_centre  0.000          DFT      0.203  0.203    0.330     5 1.86 1.94 2.04 2.07 2.28 3.02        2.492   0.061   0.967   0.528       True
+    3         X2_4e_cavity_offcentre  0.000          DFT      0.196  0.196    0.303     5 1.86 1.94 2.05 2.07 2.26 3.02        2.490   0.938   0.034   0.472       True
+    3                    DFT_relaxed  0.000          DFT      0.195  0.195    0.206     5 1.86 1.94 2.05 2.07 2.26 3.02        2.490   0.938   0.034   0.471       True
+    3                X4_4e_5O_nearZr  0.000          DFT      0.183  0.183    1.765     5 1.86 1.93 2.05 2.08 2.25 3.01        2.489   0.936   0.036   0.471       True
+    3               X3_4e_tet_pocket  0.000          DFT      0.184  0.184    1.164     5 1.86 1.93 2.05 2.08 2.25 3.01        2.489   0.936   0.035   0.471       True
+    3 defects.py_Li_i (existing run)  0.000          DFT      0.186  0.186      NaN     5 1.86 1.93 2.05 2.07 2.25 3.01        2.489   0.937   0.035   0.471       True
+    3             DFT_original_start  0.000          DFT      0.186  0.186    0.905     5 1.86 1.93 2.05 2.07 2.25 3.01        2.489   0.937   0.035   0.471       True
+14:52:18 INFO lii_site_scan: Wrote /Users/sh5320/Documents/gitRepos/MACE_ZrO2/relaxation/medium-mpa-0/Lii_site_scan/lii_site_scan.csv

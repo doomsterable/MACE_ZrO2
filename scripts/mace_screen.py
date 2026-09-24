@@ -30,6 +30,8 @@ from ase.io import read
 logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s: %(message)s", datefmt="%H:%M:%S")
 log = logging.getLogger(__name__)
 
+REPO = Path(__file__).resolve().parents[1]
+
 # e.g. mZrO2_Vo4_isif3_q+2.xyz -> polymorph m, defect Vo4, isif 3, charge +2
 NAME_RE = re.compile(
     r"^(?P<polymorph>[mt])ZrO2"
@@ -76,7 +78,7 @@ def build_calculator(model: str = "medium-mpa-0", device: str = "cpu", dtype: st
 
 
 def evaluate_directory(
-    directory: str = "relaxedZrO2",
+    directory: Path = REPO / "structures" / "dft_relaxed",
     model: str = "medium-mpa-0",
     device: str = "cpu",
     dtype: str = "float64",
@@ -127,11 +129,11 @@ def evaluate_directory(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--dir", default="relaxedZrO2", help="directory of relaxed .xyz files")
+    parser.add_argument("--dir", type=Path, default=REPO / "structures" / "dft_relaxed", help="directory of relaxed .xyz files")
     parser.add_argument("--model", default="medium-mpa-0", help="MACE-MP model name")
     parser.add_argument("--device", default="cpu", help="cpu or cuda")
     parser.add_argument("--dtype", default="float64", help="float64 or float32")
-    parser.add_argument("--output", default="mace_vs_dft.csv", help="output CSV path")
+    parser.add_argument("--output", type=Path, default=REPO / "results" / "screening" / "mace_vs_dft.csv", help="output CSV path")
     parser.add_argument("--use-charge", action="store_true", help="pass the defect charge to the model (PolarMACE)")
     args = parser.parse_args()
 

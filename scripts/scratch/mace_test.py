@@ -13,8 +13,9 @@ from mace.calculators import mace_polar
 from mace.calculators import mace_mp
 import numpy as np
 from ase.io import read
+from pathlib import Path
 
-atoms = read("CONTCAR")
+atoms = read(Path(__file__).resolve().parents[2] / "structures" / "dft_relaxed" / "CONTCAR")
 
 # # Alpha-Zr: HCP structure, a=3.232 Å, c=5.147 Å
 # a = 3.232

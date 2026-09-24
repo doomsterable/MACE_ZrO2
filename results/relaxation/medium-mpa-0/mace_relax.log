@@ -1,0 +1,149 @@
+14:38:40 INFO mace_relax: MACE-MP ignores charge: running q=0 only
+14:39:05 INFO mace_relax: Loading MACE model 'medium-mpa-0' on cpu (float64)
+14:39:05 INFO root: Using CPU
+14:39:05 INFO root: Using head default out of  ['default']
+14:39:05 INFO mace_relax: Stage 1: unit cells
+14:39:08 INFO mace_relax:   mZrO2_unitcell                 E    -114.0099 eV | fmax 0.0091 eV/A |   32 steps | converged True
+14:39:09 INFO mace_relax:   tZrO2_unitcell                 E     -56.7635 eV | fmax 0.0007 eV/A |   12 steps | converged True
+14:39:13 INFO mace_relax:   Li2ZrO3_unitcell               E    -173.5489 eV | fmax 0.0063 eV/A |   29 steps | converged True
+14:39:18 INFO mace_relax:   K2ZrO3_unitcell                E    -161.0478 eV | fmax 0.0059 eV/A |   34 steps | converged True
+14:39:21 INFO mace_relax:   K4Zr5O12_unitcell              E    -166.8290 eV | fmax 0.0084 eV/A |   17 steps | converged True
+14:39:21 INFO mace_relax:   aZr_unitcell                   E     -17.0793 eV | fmax 0.0000 eV/A |    4 steps | converged True
+14:39:21 INFO mace_relax: Stage 2: host supercells
+14:39:21 INFO mace_relax:   mZrO2: (2, 2, 2) tiling -> 96 atoms
+14:39:22 INFO mace_relax:   mZrO2_supercell                E    -912.0795 eV | fmax 0.0091 eV/A |    0 steps | converged True
+14:39:22 INFO mace_relax:   tZrO2: (3, 3, 2) tiling -> 108 atoms
+14:39:23 INFO mace_relax:   tZrO2_supercell                E   -1021.7425 eV | fmax 0.0007 eV/A |    0 steps | converged True
+14:39:23 INFO mace_relax: Stage 3: 2 defect relaxations
+14:39:23 INFO mace_relax: [1/2] mZrO2_Vo3_isif3_q0
+14:39:23 INFO defects: Building V_O3 on the mZrO2 supercell (96 atoms)
+14:39:23 INFO defects:   site: O #16, frac (0.468, 0.413, 0.574), 3 Zr within 2.6 A, 1.31 A from cell centre (32 candidates on this sublattice)
+14:40:29 INFO mace_relax:   mZrO2_Vo3_isif3_q0             E    -903.2093 eV | fmax 0.0088 eV/A |   61 steps | converged True
+14:40:29 INFO mace_relax: [2/2] mZrO2_Vo3_isif2_q0
+14:40:29 INFO defects: Building V_O3 on the mZrO2 supercell (96 atoms)
+14:40:30 INFO defects:   site: O #16, frac (0.468, 0.413, 0.574), 3 Zr within 2.6 A, 1.31 A from cell centre (32 candidates on this sublattice)
+14:41:04 INFO mace_relax:   mZrO2_Vo3_isif2_q0             E    -903.1895 eV | fmax 0.0090 eV/A |   29 steps | converged True
+14:41:04 INFO mace_relax: Wrote 10 rows to /Users/sh5320/Documents/gitRepos/MACE_ZrO2/relaxation/medium-mpa-0/mace_relax_medium-mpa-0.csv
+14:41:14 INFO mace_relax: MACE-MP ignores charge: running q=0 only
+14:41:23 INFO mace_relax: Loading MACE model 'medium-mpa-0' on cpu (float64)
+14:41:23 INFO root: Using CPU
+14:41:23 INFO root: Using head default out of  ['default']
+14:41:23 INFO mace_relax: Stage 1: unit cells
+14:41:23 INFO mace_relax:   mZrO2_unitcell.xyz exists, reusing
+14:41:23 INFO mace_relax:   tZrO2_unitcell.xyz exists, reusing
+14:41:23 INFO mace_relax:   Li2ZrO3_unitcell.xyz exists, reusing
+14:41:23 INFO mace_relax:   K2ZrO3_unitcell.xyz exists, reusing
+14:41:23 INFO mace_relax:   K4Zr5O12_unitcell.xyz exists, reusing
+14:41:23 INFO mace_relax:   aZr_unitcell.xyz exists, reusing
+14:41:23 INFO mace_relax: Stage 2: host supercells
+14:41:23 INFO mace_relax:   mZrO2: (2, 2, 2) tiling -> 96 atoms
+14:41:23 INFO mace_relax:   mZrO2_supercell.xyz exists, reusing
+14:41:23 INFO mace_relax:   tZrO2: (3, 3, 2) tiling -> 108 atoms
+14:41:23 INFO mace_relax:   tZrO2_supercell.xyz exists, reusing
+14:41:23 INFO mace_relax: Stage 3: 26 defect relaxations
+14:41:23 INFO mace_relax: [1/26] mZrO2_Vo3_isif3_q0
+14:41:23 INFO defects: Building V_O3 on the mZrO2 supercell (96 atoms)
+14:41:23 INFO defects:   site: O #83, frac (0.532, 0.587, 0.426), 3 Zr within 2.6 A, 1.31 A from cell centre (32 candidates on this sublattice)
+14:41:23 INFO mace_relax:   mZrO2_Vo3_isif3_q0.xyz exists, reusing
+14:41:23 INFO mace_relax: [2/26] mZrO2_Vo3_isif2_q0
+14:41:23 INFO defects: Building V_O3 on the mZrO2 supercell (96 atoms)
+14:41:23 INFO defects:   site: O #83, frac (0.532, 0.587, 0.426), 3 Zr within 2.6 A, 1.31 A from cell centre (32 candidates on this sublattice)
+14:41:23 INFO mace_relax:   mZrO2_Vo3_isif2_q0.xyz exists, reusing
+14:41:23 INFO mace_relax: [3/26] mZrO2_Ko3_isif3_q0
+14:41:23 INFO defects: Building K_O3 on the mZrO2 supercell (96 atoms)
+14:41:23 INFO defects:   site: O #83, frac (0.532, 0.587, 0.426), 3 Zr within 2.6 A, 1.31 A from cell centre (32 candidates on this sublattice)
+14:42:29 INFO mace_relax:   mZrO2_Ko3_isif3_q0             E    -901.4182 eV | fmax 0.0087 eV/A |   83 steps | converged True
+14:42:29 INFO mace_relax: [4/26] mZrO2_Ko3_isif2_q0
+14:42:29 INFO defects: Building K_O3 on the mZrO2 supercell (96 atoms)
+14:42:29 INFO defects:   site: O #83, frac (0.532, 0.587, 0.426), 3 Zr within 2.6 A, 1.31 A from cell centre (32 candidates on this sublattice)
+14:43:09 INFO mace_relax:   mZrO2_Ko3_isif2_q0             E    -901.3463 eV | fmax 0.0090 eV/A |   53 steps | converged True
+14:43:09 INFO mace_relax: [5/26] mZrO2_Lio3_isif3_q0
+14:43:09 INFO defects: Building Li_O3 on the mZrO2 supercell (96 atoms)
+14:43:09 INFO defects:   site: O #83, frac (0.532, 0.587, 0.426), 3 Zr within 2.6 A, 1.31 A from cell centre (32 candidates on this sublattice)
+14:45:28 INFO mace_relax:   mZrO2_Lio3_isif3_q0            E    -905.1556 eV | fmax 0.0099 eV/A |  130 steps | converged True
+14:45:28 INFO mace_relax: [6/26] mZrO2_Lio3_isif2_q0
+14:45:28 INFO defects: Building Li_O3 on the mZrO2 supercell (96 atoms)
+14:45:28 INFO defects:   site: O #83, frac (0.532, 0.587, 0.426), 3 Zr within 2.6 A, 1.31 A from cell centre (32 candidates on this sublattice)
+14:47:06 INFO mace_relax:   mZrO2_Lio3_isif2_q0            E    -905.1046 eV | fmax 0.0091 eV/A |  115 steps | converged True
+14:47:06 INFO mace_relax: [7/26] mZrO2_Vo4_isif3_q0
+14:47:06 INFO defects: Building V_O4 on the mZrO2 supercell (96 atoms)
+14:47:06 INFO defects:   site: O #45, frac (0.275, 0.628, 0.512), 4 Zr within 2.6 A, 2.74 A from cell centre (32 candidates on this sublattice)
+14:47:52 INFO mace_relax:   mZrO2_Vo4_isif3_q0             E    -902.6451 eV | fmax 0.0066 eV/A |   52 steps | converged True
+14:47:52 INFO mace_relax: [8/26] mZrO2_Vo4_isif2_q0
+14:47:52 INFO defects: Building V_O4 on the mZrO2 supercell (96 atoms)
+14:47:52 INFO defects:   site: O #45, frac (0.275, 0.628, 0.512), 4 Zr within 2.6 A, 2.74 A from cell centre (32 candidates on this sublattice)
+14:48:18 INFO mace_relax:   mZrO2_Vo4_isif2_q0             E    -902.6360 eV | fmax 0.0084 eV/A |   26 steps | converged True
+14:48:18 INFO mace_relax: [9/26] mZrO2_Ko4_isif3_q0
+14:48:18 INFO defects: Building K_O4 on the mZrO2 supercell (96 atoms)
+14:48:18 INFO defects:   site: O #45, frac (0.275, 0.628, 0.512), 4 Zr within 2.6 A, 2.74 A from cell centre (32 candidates on this sublattice)
+14:49:35 INFO mace_relax:   mZrO2_Ko4_isif3_q0             E    -900.2536 eV | fmax 0.0098 eV/A |   83 steps | converged True
+14:49:35 INFO mace_relax: [10/26] mZrO2_Ko4_isif2_q0
+14:49:35 INFO defects: Building K_O4 on the mZrO2 supercell (96 atoms)
+14:49:35 INFO defects:   site: O #45, frac (0.275, 0.628, 0.512), 4 Zr within 2.6 A, 2.74 A from cell centre (32 candidates on this sublattice)
+14:50:33 INFO mace_relax:   mZrO2_Ko4_isif2_q0             E    -900.1320 eV | fmax 0.0086 eV/A |   66 steps | converged True
+14:50:33 INFO mace_relax: [11/26] mZrO2_Lio4_isif3_q0
+14:50:33 INFO defects: Building Li_O4 on the mZrO2 supercell (96 atoms)
+14:50:33 INFO defects:   site: O #45, frac (0.275, 0.628, 0.512), 4 Zr within 2.6 A, 2.74 A from cell centre (32 candidates on this sublattice)
+14:53:00 INFO mace_relax:   mZrO2_Lio4_isif3_q0            E    -905.0995 eV | fmax 0.0098 eV/A |  138 steps | converged True
+14:53:00 INFO mace_relax: [12/26] mZrO2_Lio4_isif2_q0
+14:53:00 INFO defects: Building Li_O4 on the mZrO2 supercell (96 atoms)
+14:53:00 INFO defects:   site: O #45, frac (0.275, 0.628, 0.512), 4 Zr within 2.6 A, 2.74 A from cell centre (32 candidates on this sublattice)
+14:54:37 INFO mace_relax:   mZrO2_Lio4_isif2_q0            E    -905.0647 eV | fmax 0.0091 eV/A |  114 steps | converged True
+14:54:37 INFO mace_relax: [13/26] mZrO2_Vzr_isif3_q0
+14:54:37 INFO defects: Building V_Zr on the mZrO2 supercell (96 atoms)
+14:54:37 INFO defects:   site: Zr #3, frac (0.362, 0.478, 0.395), 1 Zr within 2.6 A, 1.70 A from cell centre (32 candidates on this sublattice)
+14:55:36 INFO mace_relax:   mZrO2_Vzr_isif3_q0             E    -890.3797 eV | fmax 0.0086 eV/A |   78 steps | converged True
+14:55:36 INFO mace_relax: [14/26] mZrO2_Vzr_isif2_q0
+14:55:36 INFO defects: Building V_Zr on the mZrO2 supercell (96 atoms)
+14:55:36 INFO defects:   site: Zr #3, frac (0.362, 0.478, 0.395), 1 Zr within 2.6 A, 1.70 A from cell centre (32 candidates on this sublattice)
+15:55:43 INFO mace_relax:   mZrO2_Vzr_isif2_q0             E    -890.2878 eV | fmax 0.0095 eV/A |   42 steps | converged True
+15:55:43 INFO mace_relax: [15/26] mZrO2_Kzr_isif3_q0
+15:55:43 INFO defects: Building K_Zr on the mZrO2 supercell (96 atoms)
+15:55:43 INFO defects:   site: Zr #3, frac (0.362, 0.478, 0.395), 1 Zr within 2.6 A, 1.70 A from cell centre (32 candidates on this sublattice)
+16:34:47 INFO mace_relax:   mZrO2_Kzr_isif3_q0             E    -895.1050 eV | fmax 0.0077 eV/A |   73 steps | converged True
+16:34:47 INFO mace_relax: [16/26] mZrO2_Kzr_isif2_q0
+16:34:47 INFO defects: Building K_Zr on the mZrO2 supercell (96 atoms)
+16:34:47 INFO defects:   site: Zr #3, frac (0.362, 0.478, 0.395), 1 Zr within 2.6 A, 1.70 A from cell centre (32 candidates on this sublattice)
+16:40:22 INFO mace_relax:   mZrO2_Kzr_isif2_q0             E    -894.8900 eV | fmax 0.0091 eV/A |   54 steps | converged True
+16:40:22 INFO mace_relax: [17/26] mZrO2_Lizr_isif3_q0
+16:40:22 INFO defects: Building Li_Zr on the mZrO2 supercell (96 atoms)
+16:40:22 INFO defects:   site: Zr #3, frac (0.362, 0.478, 0.395), 1 Zr within 2.6 A, 1.70 A from cell centre (32 candidates on this sublattice)
+18:00:13 INFO mace_relax:   mZrO2_Lizr_isif3_q0            E    -897.4749 eV | fmax 0.0095 eV/A |   67 steps | converged True
+18:00:13 INFO mace_relax: [18/26] mZrO2_Lizr_isif2_q0
+18:00:13 INFO defects: Building Li_Zr on the mZrO2 supercell (96 atoms)
+18:00:13 INFO defects:   site: Zr #3, frac (0.362, 0.478, 0.395), 1 Zr within 2.6 A, 1.70 A from cell centre (32 candidates on this sublattice)
+18:36:18 INFO mace_relax:   mZrO2_Lizr_isif2_q0            E    -897.4285 eV | fmax 0.0096 eV/A |   30 steps | converged True
+18:36:18 INFO mace_relax: [19/26] mZrO2_Ki_isif3_q0
+18:36:18 INFO defects: Building K_i on the mZrO2 supercell (96 atoms)
+18:36:18 INFO defects:   inserted K at frac (0.40789, 0.53806, 0.67356), nearest neighbour 1.85 A
+19:20:05 INFO mace_relax:   mZrO2_Ki_isif3_q0              E    -909.7122 eV | fmax 0.0069 eV/A |   78 steps | converged True
+19:20:05 INFO mace_relax: [20/26] mZrO2_Ki_isif2_q0
+19:20:05 INFO defects: Building K_i on the mZrO2 supercell (96 atoms)
+19:20:05 INFO defects:   inserted K at frac (0.40789, 0.53806, 0.67356), nearest neighbour 1.85 A
+19:27:53 INFO mace_relax:   mZrO2_Ki_isif2_q0              E    -909.6114 eV | fmax 0.0088 eV/A |   36 steps | converged True
+19:27:53 INFO mace_relax: [21/26] mZrO2_Lii_isif3_q0
+19:27:53 INFO defects: Building Li_i on the mZrO2 supercell (96 atoms)
+19:27:53 INFO defects:   inserted Li at frac (0.40789, 0.53806, 0.67356), nearest neighbour 1.85 A
+19:28:58 INFO mace_relax:   mZrO2_Lii_isif3_q0             E    -914.9171 eV | fmax 0.0076 eV/A |   87 steps | converged True
+19:28:58 INFO mace_relax: [22/26] mZrO2_Lii_isif2_q0
+19:28:58 INFO defects: Building Li_i on the mZrO2 supercell (96 atoms)
+19:28:58 INFO defects:   inserted Li at frac (0.40789, 0.53806, 0.67356), nearest neighbour 1.85 A
+19:29:45 INFO mace_relax:   mZrO2_Lii_isif2_q0             E    -914.8271 eV | fmax 0.0096 eV/A |   32 steps | converged True
+19:29:45 INFO mace_relax: [23/26] mZrO2_Zri_isif3_q0
+19:29:45 INFO defects: Building Zr_i on the mZrO2 supercell (96 atoms)
+19:29:45 INFO defects:   inserted Zr at frac (0.40789, 0.53806, 0.67356), nearest neighbour 1.85 A
+19:31:34 INFO mace_relax:   mZrO2_Zri_isif3_q0             E    -920.4171 eV | fmax 0.0093 eV/A |   75 steps | converged True
+19:31:34 INFO mace_relax: [24/26] mZrO2_Zri_isif2_q0
+19:31:34 INFO defects: Building Zr_i on the mZrO2 supercell (96 atoms)
+19:31:34 INFO defects:   inserted Zr at frac (0.40789, 0.53806, 0.67356), nearest neighbour 1.85 A
+19:32:35 INFO mace_relax:   mZrO2_Zri_isif2_q0             E    -920.3393 eV | fmax 0.0081 eV/A |   45 steps | converged True
+19:32:35 INFO mace_relax: [25/26] mZrO2_Oi_isif3_q0
+19:32:35 INFO defects: Building O_i on the mZrO2 supercell (96 atoms)
+19:32:35 INFO defects:   inserted O at frac (0.40789, 0.53806, 0.67356), nearest neighbour 1.85 A
+19:33:47 INFO mace_relax:   mZrO2_Oi_isif3_q0              E    -915.1010 eV | fmax 0.0096 eV/A |   53 steps | converged True
+19:33:47 INFO mace_relax: [26/26] mZrO2_Oi_isif2_q0
+19:33:47 INFO defects: Building O_i on the mZrO2 supercell (96 atoms)
+19:33:47 INFO defects:   inserted O at frac (0.40789, 0.53806, 0.67356), nearest neighbour 1.85 A
+19:35:40 INFO mace_relax:   mZrO2_Oi_isif2_q0              E    -915.3349 eV | fmax 0.0096 eV/A |   73 steps | converged True
+19:35:41 INFO mace_relax: Wrote 34 rows to /Users/sh5320/Documents/gitRepos/MACE_ZrO2/relaxation/medium-mpa-0/mace_relax_medium-mpa-0.csv
+15:00:00 INFO mace_relax: Wrote 34 rows to /Users/sh5320/Documents/gitRepos/MACE_ZrO2/results/relaxation/medium-mpa-0/mace_relax_medium-mpa-0.csv
