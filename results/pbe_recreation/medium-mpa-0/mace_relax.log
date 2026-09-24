@@ -147,3 +147,4 @@
 19:35:40 INFO mace_relax:   mZrO2_Oi_isif2_q0              E    -915.3349 eV | fmax 0.0096 eV/A |   73 steps | converged True
 19:35:41 INFO mace_relax: Wrote 34 rows to /Users/sh5320/Documents/gitRepos/MACE_ZrO2/relaxation/medium-mpa-0/mace_relax_medium-mpa-0.csv
 15:00:00 INFO mace_relax: Wrote 34 rows to /Users/sh5320/Documents/gitRepos/MACE_ZrO2/results/relaxation/medium-mpa-0/mace_relax_medium-mpa-0.csv
+15:02:24 INFO mace_relax: Wrote 34 rows to /Users/sh5320/Documents/gitRepos/MACE_ZrO2/results/pbe_recreation/medium-mpa-0/mace_relax_medium-mpa-0.csv

@@ -30,7 +30,8 @@ species.py):
 The existing MACE Li_i relaxations from mace_relax.py (mZrO2_Lii_isif*_q0.xyz) are
 analysed too, if present, so you can see where the defects.py site went.
 
-Needs mace_relax.py (same folder) and results/relaxation/medium-mpa-0/mZrO2_supercell.xyz to exist.
+Needs mace_relax.py (same folder) and results/pbe_recreation/medium-mpa-0/reference/mZrO2_supercell.xyz
+to exist. Output goes to results/lii_site_scan/medium-mpa-0/.
 
   uv run --script mace_lii_site_scan.py
 """
@@ -61,9 +62,9 @@ RATTLE = 0.05           # A, random kick to the Li only (needed to get X1 off th
 SEED = 42
 OVERWRITE = False       # rerun relaxations whose output already exists
 
-DATA = HERE.parent / "results" / "relaxation" / MODEL
-HOST_FILE = DATA / "mZrO2_supercell.xyz"
-OUT_DIR = DATA / "Lii_site_scan"
+DATA = HERE.parent / "results" / "pbe_recreation" / MODEL
+HOST_FILE = DATA / "reference" / "mZrO2_supercell.xyz"
+OUT_DIR = HERE.parent / "results" / "lii_site_scan" / MODEL
 SUPERCELL = np.array([2, 2, 2])
 
 # Starting Li positions, 2x2x2 supercell fractional coordinates. For each site this is
@@ -205,7 +206,7 @@ def main() -> None:
                           charge=0, relax_cell=isif == 3, fmax=FMAX, steps=STEPS, overwrite=OVERWRITE)
             rows.append(analyse(name, isif, final, host, atoms))
 
-        existing = DATA / f"mZrO2_Lii_isif{isif}_q0.xyz"
+        existing = DATA / "defects" / f"mZrO2_Lii_isif{isif}_q0.xyz"
         if existing.exists():
             rows.append(analyse("defects.py_Li_i (existing run)", isif, read(existing), host, None))
 

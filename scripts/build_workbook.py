@@ -99,14 +99,14 @@ def energy(path: Path) -> tuple[float, bool] | None:
 
 def build_inputs(ws: Worksheet, data: Path = Path("."), model: str = "medium-mpa-0") -> None:
     """Reference energies and chemical potentials, same rows as the r2SCAN Inputs sheet."""
-    e = {k: energy(data / f"{k}.xyz") for k in ("mZrO2_supercell", "tZrO2_supercell", "mZrO2_unitcell",
+    e = {k: energy(data / "reference" / f"{k}.xyz") for k in ("mZrO2_supercell", "tZrO2_supercell", "mZrO2_unitcell",
                                                  "tZrO2_unitcell", "aZr_unitcell", "K2ZrO3_unitcell",
                                                  "K4Zr5O12_unitcell", "Li2ZrO3_unitcell")}
     missing = [k for k, v in e.items() if v is None]
     assert not missing, f"Missing MACE reference structures: {missing}"
     tot = {k: v[0] for k, v in e.items() if v is not None}
-    per_atom = {k: tot[k] / len(read(data / f"{k}.xyz")) for k in tot}
-    cell = read(data / "mZrO2_supercell.xyz").cell.lengths()
+    per_atom = {k: tot[k] / len(read(data / "reference" / f"{k}.xyz")) for k in tot}
+    cell = read(data / "reference" / "mZrO2_supercell.xyz").cell.lengths()
 
     put(ws, "A1", f"Inputs & reference energies — MACE-MP ({model})", font=Font(name="Arial", bold=True, size=13))
     put(ws, "A2", "Edit any blue cell — the ISIF=3, ISIF=2 and Lines sheets all recalculate.",
@@ -189,7 +189,7 @@ def build_isif(ws: Worksheet, isif: int = 3, data: Path = Path("."), model: str 
             d = DEFECTS[key]
             mu = "$B$10" if d.element == "Li" else "$B$9"
             for q in d.charges:
-                result = energy(data / f"{Job(d, isif, q, host).tag}.xyz")
+                result = energy(data / "defects" / f"{Job(d, isif, q, host).tag}.xyz")
                 for col, value in zip("ABC", (phase, key, defect_type(d))):
                     put(ws, f"{col}{r}", value, TEXT)
                 for col, value in zip("DEFG", (q, *DN[family(d)])):
@@ -287,7 +287,7 @@ def add_series(chart: ScatterChart, ws: Worksheet, columns: list[int], final: in
 
 def main(model: str = "medium-mpa-0") -> None:
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(name)s: %(message)s", datefmt="%H:%M:%S")
-    data = ROOT / "MACE_ZrO2" / "results" / "relaxation" / model
+    data = ROOT / "MACE_ZrO2" / "results" / "pbe_recreation" / model
     out = ROOT / "MACE_ZrO2" / "results" / "MACE_ZrO2_formation_energies.xlsx"
     log.info("Reading MACE structures from %s", data)
 

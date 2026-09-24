@@ -25,7 +25,8 @@ the DFT one exactly:
 MACE-MP has no notion of charge, so for it only q=0 is run; a 'polar-*' model gets
 every charge state in the registry via atoms.info["charge"].
 
-Finished structures are skipped on rerun (extxyz with MACE energy/forces/stress),
+Unit cells and supercells go to results/pbe_recreation/<model>/reference/, defects to
+.../defects/. Finished structures are skipped on rerun (extxyz with MACE energy/forces/stress),
 and --collect-only rebuilds the CSV from those files without running MACE.
 
   uv run --script mace_relax.py
@@ -92,6 +93,7 @@ def relax(
     atoms = atoms.copy()
     atoms.info.update(charge=charge, spin=1, external_field=[0.0, 0.0, 0.0])
     atoms.calc = calc
+    path.parent.mkdir(parents=True, exist_ok=True)
     target = FrechetCellFilter(atoms) if relax_cell else atoms
     opt = BFGS(target, logfile=None)
     converged = bool(opt.run(fmax=fmax, steps=steps))
@@ -112,7 +114,7 @@ def relax(
 def relax_unitcells(calc: Calculator, out_dir: Path = Path("."), **kw: object) -> dict[str, Atoms]:
     """Stage 1: every species from its CIF, cell + positions."""
     log.info("Stage 1: unit cells")
-    return {s.key: relax(s.atoms(), calc, out_dir / f"{s.key}_unitcell.xyz", **kw) for s in resolve("all")}
+    return {s.key: relax(s.atoms(), calc, out_dir / "reference" / f"{s.key}_unitcell.xyz", **kw) for s in resolve("all")}
 
 
 def relax_supercells(
@@ -124,7 +126,7 @@ def relax_supercells(
     for s in resolve("hosts"):
         tiled = unitcells[s.key].repeat(s.host_supercell)
         log.info("  %s: %s tiling -> %d atoms", s.key, s.host_supercell, len(tiled))
-        out[s.key] = relax(tiled, calc, out_dir / f"{s.key}_supercell.xyz", **kw)
+        out[s.key] = relax(tiled, calc, out_dir / "reference" / f"{s.key}_supercell.xyz", **kw)
     return out
 
 
@@ -136,17 +138,17 @@ def relax_defects(
     for i, job in enumerate(job_list, start=1):
         log.info("[%d/%d] %s", i, len(job_list), job.tag)
         atoms, _ = job.defect.build(pristine, job.host)
-        relax(atoms, calc, out_dir / f"{job.tag}.xyz", charge=job.charge, relax_cell=job.isif == 3, **kw)
+        relax(atoms, calc, out_dir / "defects" / f"{job.tag}.xyz", charge=job.charge, relax_cell=job.isif == 3, **kw)
 
 
 def collect(out_dir: Path = Path("."), csv: Path = Path("mace_relax.csv")) -> pd.DataFrame:
     """Tabulate every relaxed structure in out_dir (the data needed for any later plot)."""
     rows: list[dict[str, object]] = []
-    for path in sorted(out_dir.glob("*.xyz")):
+    for path in sorted(out_dir.glob("*/*.xyz")):
         atoms = read(path)
         energy = float(atoms.get_potential_energy())
         rows.append({
-            "file": path.name,
+            "file": str(path.relative_to(out_dir)),
             "formula": atoms.get_chemical_formula(),
             "n_atoms": len(atoms),
             "charge": atoms.info.get("charge", 0),
@@ -177,7 +179,7 @@ def main() -> None:
     parser.add_argument("--collect-only", action="store_true", help="skip MACE, just rebuild the CSV")
     args = parser.parse_args()
 
-    out_dir = Path(__file__).resolve().parents[1] / "results" / "relaxation" / args.model
+    out_dir = Path(__file__).resolve().parents[1] / "results" / "pbe_recreation" / args.model
     setup_logging(out_dir)
     csv = out_dir / f"mace_relax_{args.model}.csv"
     if args.collect_only:
