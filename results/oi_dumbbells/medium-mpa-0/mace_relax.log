@@ -1,0 +1,5 @@
+17:28:39 INFO mace_oi_dumbbells: Found 7 dumbbells in /Users/sh5320/Documents/gitRepos/ZrO2/shared/interstitial/Oi_dumbbells
+17:29:19 INFO mace_relax: Loading MACE model 'medium-mpa-0' on cpu (float64)
+17:29:19 INFO root: Using CPU
+17:29:19 INFO root: Using head default out of  ['default']
+17:29:19 INFO mace_oi_dumbbells: 001_z: 109 atoms (host 108 + 1 O)

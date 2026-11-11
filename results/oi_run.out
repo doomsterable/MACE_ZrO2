@@ -1,0 +1,28 @@
+Downloading torch (121.4MiB)
+ Downloaded torch
+Installed 45 packages in 1.67s
+17:28:39 INFO mace_oi_dumbbells: Found 7 dumbbells in /Users/sh5320/Documents/gitRepos/ZrO2/shared/interstitial/Oi_dumbbells
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/e3nn/o3/_wigner.py:10: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  _Jd, _W3j_flat, _W3j_indices = torch.load(os.path.join(os.path.dirname(__file__), 'constants.pt'))
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/graph_longrange/slabs.py:197: SyntaxWarning: invalid escape sequence '\D'
+  The corrections are: $E = E_{pbc} + \Delta E$
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/graph_longrange/kspace.py:227: SyntaxWarning: invalid escape sequence '\p'
+  \rho(r) = (1/(2\pi)^3) * sum_k [2 Re{rho_k} cos(k·r) - 2 Im{rho_k} sin(k·r)],
+17:29:19 INFO mace_relax: Loading MACE model 'medium-mpa-0' on cpu (float64)
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/mace/calculators/mace.py:226: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  torch.load(f=model_path, map_location=device)
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+/Users/sh5320/.cache/uv/environments-v2/mace-oi-dumbbells-ca95dd2741950dc4/lib/python3.12/site-packages/torch/jit/_serialization.py:176: FutureWarning: `torch.jit.load` is deprecated. Please switch to `torch.export`.
+  warnings.warn(
+17:29:19 INFO root: Using CPU
+17:29:19 INFO root: Using head default out of  ['default']
+17:29:19 INFO mace_oi_dumbbells: 001_z: 109 atoms (host 108 + 1 O)
